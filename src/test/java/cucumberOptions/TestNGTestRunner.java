@@ -7,7 +7,8 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = "stepDefinitions",
-        monochrome = true
+        monochrome = true,
+        snippets = CucumberOptions.SnippetType.UNDERSCORE
 )
 public class TestNGTestRunner extends AbstractTestNGCucumberTests {
     @DataProvider(parallel = true)

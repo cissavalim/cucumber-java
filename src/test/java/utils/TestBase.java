@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 
 public class TestBase {
@@ -24,7 +25,8 @@ public class TestBase {
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/test/resources/chromedriver.exe");
                 driver = new ChromeDriver();
             }
-        driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            driver.get(url);
         }
         return driver;
     }

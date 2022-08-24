@@ -12,6 +12,7 @@ public class GenericUtils {
     public GenericUtils(WebDriver driver){
         this.driver = driver;
     }
+
     public void SwitchWindowToChild(){
         Set<String> s1 = driver.getWindowHandles();
 
