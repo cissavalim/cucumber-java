@@ -11,9 +11,7 @@ import utils.TestContextSetup;
 
 public class CheckoutPageStepDefinitions {
 
-    public String productName;
     public TestContextSetup testContextSetup;
-    public LandingPage landingPage;
     public CheckoutPage checkoutPage;
 
     public CheckoutPageStepDefinitions(TestContextSetup testContextSetup) {

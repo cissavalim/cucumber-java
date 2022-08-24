@@ -16,7 +16,6 @@ public class OfferPageStepDefinitions {
 
     public String SecondProductName;
     public TestContextSetup testContextSetup;
-    public PageObjectManager pageObjectManager;
     public OffersPage offersPage;
     public LandingPage landingPage;
 
@@ -37,8 +36,6 @@ public class OfferPageStepDefinitions {
 
     public void switchToOffersPage() throws InterruptedException {
 
-        //if(testContextSetup.driver.getCurrentUrl().equals("https://rahulshettyacademy.com/seleniumPractise/#/offers"))
-
         landingPage = testContextSetup.pageObjectManager.getLandingPage();
         landingPage.selectTopDealsPage();
         testContextSetup.genericUtils.SwitchWindowToChild();
@@ -46,7 +43,9 @@ public class OfferPageStepDefinitions {
     }
 
     @And("validate if products match.")
-    public void validateIfProductsMatch() throws InterruptedException {
+    public void validateIfProductsMatch() {
         Assert.assertEquals(SecondProductName, testContextSetup.productName);
     }
+
+
 }

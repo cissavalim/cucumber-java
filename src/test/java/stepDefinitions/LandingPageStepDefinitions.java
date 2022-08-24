@@ -41,4 +41,6 @@ public class LandingPageStepDefinitions {
         landingPage.incrementQuantity(quantity);
         landingPage.addToCart();
     }
+
+
 }
